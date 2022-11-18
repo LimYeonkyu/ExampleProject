@@ -45,6 +45,7 @@
 <table id="list" width="90%">
 <tr>
 	<th>Id</th>
+	<th>Image</th>
 	<th>Category</th>
 	<th>Title</th>
 	<th>Writer</th>
@@ -56,6 +57,7 @@
 <c:forEach items="${list}" var="u">
 	<tr>
 		<td>${u.getSeq()}</td>
+		<td><c:if test="${u.getPhoto() ne ''}"><img src="${pageContext.request.contextPath }/upload/${u.getPhoto()}" class="photo"></c:if></td>
 		<td>${u.getCategory()}</td>
 		<td>${u.getTitle()}</td>
 		<td>${u.getWriter()}</td>
